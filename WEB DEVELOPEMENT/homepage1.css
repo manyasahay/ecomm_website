@@ -1,0 +1,59 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('laptop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #fff; 
+}
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.links-container {
+    list-style: none;
+}
+
+.link-item {
+    display: inline;
+    margin-right: 20px;
+}
+
+.link-item:last-child {
+    margin-right: 0; 
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.brand-logo {
+    max-height: 60px;
+}
+
+
+.hero-section {
+    text-align: center;
+    padding: 100px 0; 
+}
+
+.logo {
+    max-width: 200px;
+    margin: 0 auto;
+}

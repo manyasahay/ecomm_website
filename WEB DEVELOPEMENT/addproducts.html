@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "Stylesheet" href = "addproducts.css" type = "text/css">
+    <title>Add Products</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Company Logo">
+            <span>TechEdge</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mainhome.html">Home</a></li>
+                <li><a href="catalogue.html">Shop</a>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact us.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="profile-cart">
+            <a href="login1.html">Login</a>
+            <a href="signup1.html">Signup</a>
+            <a href="viewcart.html"><img id="cartBtn" src="cart.png" alt="Cart"></a>
+        </div>
+    </header>
+    <h1>Add Product</h1>
+    <form id="product-form">
+        <input type="text" id="managerId" placeholder="Manager ID"><br>
+        <input type="text" id="productid" placeholder="Product ID"><br>
+        <input type="text" id="productname" placeholder="Product Name"><br>
+        <input type="text" id="productcat" placeholder="Product Category"><br>
+        <input type="text" id="productdesc" placeholder="Product Description"><br>
+        <input type="text" id="productcost" placeholder="Product Cost"><br>
+        <input type="file" id="imgInput" accept="image/*"><br>
+        <button type="submit" id="add-product">Add Product</button><br>
+    </form>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+       <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCBVnCNu0GAetC5I5UaIu0_0kBvJbqQ-ss",
+            authDomain: "electronicbazarmad.firebaseapp.com",
+            databaseURL: "https://electronicbazarmad-default-rtdb.firebaseio.com/",
+            projectId: "electronicbazarmad",
+            storageBucket: "electronicbazarmad.appspot.com",
+            messagingSenderId: "330157543683",
+            appId: "1:330157543683:web:12a5ee0854b79e9efcd936",
+            measurementId: "G-2DW0SHCYV0"
+        };
+
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+     </script>
+     <script src = "addproducts.js"></script>
+     <br>
+     <br>
+     
+</body>
+</html>

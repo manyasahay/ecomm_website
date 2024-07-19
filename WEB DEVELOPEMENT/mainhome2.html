@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainhome.css">
+    <title>TechEdge</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Company Logo">
+            <span>TechEdge</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mainhome.html">Home</a></li>
+                <li><a href="catalogue.html">Shop</a>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact us.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="profile-cart">
+            <a href="editprofile.html">Edit Profile</a>
+            <a href="viewcart.html"><img id="cartBtn" src="cart.png" alt="Cart"></a>
+        </div>
+    </header>
+    
+        <img class="mySlides" src="4.png">
+        <img class="mySlides" src="3.png">
+        <img class="mySlides" src="2.png">
+        <img class="mySlides" src="1.png">
+
+<script src="mainhome.js"></script>
+
+<div class="bestseller">
+    <h1>Best Sellers</h1>
+    <div class="line"></div>
+    <!-- arrow wrapper contains the review and the arrows -->
+    <div class="arrow-wrapper">
+      <!-- review section -->
+      <div id="reviewWrap" class="review-wrap">
+        <div id="imgBox"></div>
+        <div id="name"></div>
+        <div id="namedepth"></div>
+        <div id="description"></div>
+      </div>
+      <!-- left arrow -->
+      <div class="left-arrow-wrap">
+        <div class="arrow"></div>
+      </div>
+      <!-- right arrow -->
+      <div class="right-arrow-wrap">
+        <div class="arrow"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const reviewWrap = document.getElementById("reviewWrap");
+    const leftArrow = document.querySelector(".left-arrow-wrap .arrow");
+    const rightArrow = document.querySelector(".right-arrow-wrap .arrow");
+    const imgBox = document.getElementById("imgBox");
+    const name = document.getElementById("name");
+    const namedepth = document.getElementById("namedepth");
+    const description = document.getElementById("description");
+
+    let devices = [{
+        photo: "camera.jpg",
+        name: "Sony Alpha ILCE-6100Y",
+        namedepth: "Camera",
+        description: "It is a is a mirrorless camera known for its compact design and impressive image quality, featuring an interchangeable lens system and 4K video recording capabilities."
+      },
+      {
+        photo: "laptop1.jpg",
+        name: "ASUS TUF Gaming F15",
+        namedepth: "Gaming Laptop",
+        description: "It  is a powerful gaming laptop known for its durability, featuring high-performance components and a rugged design, making it suitable for gamers on the go."
+      },
+      {
+        photo: "headphone.jpg",
+        name: "Sony WH-CH720N",
+        namedepth: "HeadPhone",
+        description: "The Sony WH-CH720N is a pair of wireless noise-canceling headphones offering immersive sound and long-lasting comfort for an enjoyable listening experience."
+      },
+      
+    ];
+
+    // set the first person
+    imgBox.style.backgroundImage = `url('${devices[0].photo}')`;;
+    name.innerText =devices[0].name;
+    namedepth.innerText =devices[0].namedepth;
+    description.innerText =devices[0].description;
+    let currentDevice = 0;
+
+    //Select the side where you want to slide
+    function slide(side, deviceNumber) {
+      let reviewWrapWidth = reviewWrap.offsetWidth + "px";
+      let descriptionHeight = description.offsetHeight + "px";
+      //(+ or -)
+      let side1symbol = side === "left" ? "" : "-";
+      let side2symbol = side === "left" ? "-" : "";
+
+      setTimeout(() => {
+        imgBox.style.backgroundImage =devices[deviceNumber].photo;
+      }, 0);
+      setTimeout(() => {
+        description.style.height = descriptionHeight;
+      }, 100);
+      setTimeout(() => {
+        name.innerText =devices[deviceNumber].name;
+      }, 200);
+      setTimeout(() => {
+        namedepth.innerText =devices[deviceNumber].namedepth;
+      }, 300);
+      setTimeout(() => {
+        description.innerText =devices[deviceNumber].description;
+      }, 400);
+    }
+
+    function setNextCardLeft() {
+      if (currentDevice === 3) {
+        currentDevice = 0;
+        slide("left", currentDevice);
+      } else {
+        currentDevice++;
+      }
+
+      slide("left", currentDevice);
+    }
+
+    function setNextCardRight() {
+      if (currentDevice === 0) {
+        currentDevice = 3;
+        slide("right", currentDevice);
+      } else {
+        currentDevice--;
+      }
+
+      slide("right", currentDevice);
+    }
+
+    leftArrow.addEventListener("click", setNextCardLeft);
+    rightArrow.addEventListener("click", setNextCardRight);
+  </script>
+
+    <footer class="footer-container">
+        <div class="container">
+            <div class="footer-content">
+                <div class="connect">
+                    <h3>CONNECT WITH US</h3>
+                    <input type="email" placeholder="Enter Email ID">
+                </div>
+                
+                    <div class="col">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="contact us.html">Contact</a></li>
+                        </ul>
+                    </div>
+  
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">&copy; 2023 Tech Edge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

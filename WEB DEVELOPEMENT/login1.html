@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login1.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Company Logo">
+            <span>TechEdge</span>
+        </div>
+        <nav>
+            <ul style="list-style-type: none; ">
+                <li><a href="mainhome.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact us.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="profile-cart">
+            <!-- <a href="login1.html">Login</a> -->
+            <!-- <a href="signup1.html">Signup</a> -->
+            <!-- <a href="viewcart.html"><img id="cartBtn" src="cart.png" alt="Cart"></a> -->
+        </div>
+    </header>
+    <div class="container">
+        <img src="logowp.png.jpg" alt="Electronics Store">
+        <form id="form">
+            <input type="text" id="uname" placeholder="Enter phone number"><br>
+            <input type="password" id="pass" placeholder="Enter password"><br>
+            <input type="checkbox" id="manager">
+            <label for="manager">Manager</label><br>
+            <br>
+            <button type="submit" id="login">Login</button><br>
+        </form>
+        <p id="error-message" style="color: #fff;"></p>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src = "login1.js"></script>
+   
+
+</body>
+</html>

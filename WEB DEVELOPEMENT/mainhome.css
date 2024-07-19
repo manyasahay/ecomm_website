@@ -1,0 +1,293 @@
+/* MENU CSS */
+body, ul, li {
+    margin: 0;
+    padding: 10;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header styles */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.logo span {
+    font-size: 22px;
+    justify-content: space-between;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.profile-cart a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.profile-cart a img {
+    width: 30px; 
+    height: 30px; 
+    margin: 0 10px; 
+}
+
+/*slider*/
+
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Make the slideshow container full-width */
+    max-height: 100px; /* Adjust the maximum height as needed */
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.left, .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+/*FOOTER */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0; 
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+.connect {
+    flex: 1;
+    margin-bottom: 50px;
+}
+
+.connect h3 {
+    margin-bottom: 10px;
+    font-size: 18px; 
+}
+.connect input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.col {
+    flex: 1;
+    padding: 0 10px;
+    text-align: left;
+}
+
+ul.list-unstyled {
+    list-style: none;
+    padding: 0; 
+}
+
+ul.list-unstyled li {
+    margin-bottom: 10px;
+}
+
+ul.list-unstyled li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #555;
+    width: 100%; 
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* testemonials*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: #000;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .bestseller {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 5rem;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    .line {
+      height: 2px;
+      width: 6rem;
+      background-color: #601977;
+      margin-bottom: calc(3rem + 2vmin);
+    }
+
+    .arrow-wrapper {
+      position: relative;
+      width: 70%;
+      border-radius: 2rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      overflow: hidden;
+      place-items: center;
+    }
+
+    .review-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: calc(2rem + 1vmin);
+      width: 100%;
+    }
+
+    #imgBox {
+      border-radius: 50%;
+      width: calc(6rem + 4vmin);
+      height: calc(6rem + 4vmin);
+      position: relative;
+      box-shadow: 5px -3px #56298d;
+      background-size: cover;
+      margin-bottom: calc(0.7rem + 0.5vmin);
+    }
+
+    #name {
+      margin-bottom: calc(0.7rem + 0.5vmin);
+      font-size: calc(1rem + 0.5vmin);
+      letter-spacing: calc(0.1rem + 0.1vmin);
+      font-weight: bold;
+    }
+
+    #profession {
+      font-size: calc(0.8rem + 0.3vmin);
+      margin-bottom: calc(0.7rem + 0.5vmin);
+      color: #e26c4f;
+    }
+
+    #description {
+      font-size: calc(0.8rem + 0.3vmin);
+      width: 70%;
+      max-width: 40rem;
+      text-align: center;
+      margin-bottom: calc(1.4rem + 1vmin);
+      color: rgb(92, 92, 92);
+      line-height: 2rem;
+    }
+
+    .arrow {
+      width: calc(1.4rem + 0.6vmin);
+      height: calc(1.4rem + 0.6vmin);
+      border: solid #651f8b;
+      border-width: 0 calc(0.5rem + 0.2vmin) calc(0.5rem + 0.2vmin) 0;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .arrow:hover {
+      transition: 0.3s;
+      transform: scale(1.15);
+    }
+
+    .left-arrow-wrap {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: rotate(135deg);
+    }
+
+    .right-arrow-wrap {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      transform: rotate(-45deg);
+    }
+
+    @media screen and (max-width: 900px) {
+      .testimonial {
+        width: 100%;
+      }
+    }

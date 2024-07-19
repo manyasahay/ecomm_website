@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="logo2.jpg" alt="Company Logo">
+        <span>TechEdge</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="mainhome.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="profile-cart">
+        <a href="profile.html"><img id="profileBtn" src="profile.png" alt="Profile"></a>
+        <a href="cart.html"><img id="cartBtn" src="cart.png" alt="Cart"></a>
+    </div>
+</header>
+  <div class="container">
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>Tech Edge Contact Center</h3>
+        <ul>
+          <li><i class="fa fa-road"></i> MPSTME Vile Parle</li>
+          <li><i class="fa fa-phone"></i> +91 9999999999</li>
+          <li><i class="fa fa-envelope"></i> techedge@te.com</li>
+        </ul>
+        
+<iframe 
+width="300"
+    height="250"
+    frameborder="0"
+    style="border:0"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9464530834584!2d72.8350109743399!3d19.110004882101652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b888ae67fd%3A0xe0b9538d623ac5d2!2sMukesh%20Patel%20School%20of%20Technology%20Management%20%26%20Engineering!5e0!3m2!1sen!2sin!4v1698399371574!5m2!1sen!2sin" 
+allowfullscreen=""
+    aria-hidden="false"
+    tabindex="0"></iframe>
+      </div>
+      <div class="contact">
+        <h3>Email Us</h3>
+        <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" >
+          </p>
+          <p>
+            <label>Cause</label>
+            <input type="text" name="Cause" id="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="text" name="email" id="email" >
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="number" name="phone" id="phone">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+        <script>
+          document.getElementById("contactForm").addEventListener("submit", function(event) {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const message = document.getElementById("message").value;
+
+    if (!name) {
+      alert("Please enter your name.");
+      event.preventDefault();
+    }
+
+    if (!email) {
+      alert("Please enter an email address.");
+      event.preventDefault();
+    } else {
+      const atSymbolIndex = email.indexOf("@");
+      const dotIndex = email.lastIndexOf(".");
+      if (atSymbolIndex === -1 || dotIndex === -1 || dotIndex < atSymbolIndex) {
+        alert("Please enter a valid email address.");
+        event.preventDefault();
+      }
+    }
+
+    if (phone.length !== 10) {
+      alert("Phone number must be 10 digits.");
+      event.preventDefault();
+    }
+
+    if (!message) {
+      alert("Please enter a message.");
+      event.preventDefault();
+    }
+  });
+        </script>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+       <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCBVnCNu0GAetC5I5UaIu0_0kBvJbqQ-ss",
+            authDomain: "electronicbazarmad.firebaseapp.com",
+            databaseURL: "https://electronicbazarmad-default-rtdb.firebaseio.com/",
+            projectId: "electronicbazarmad",
+            storageBucket: "electronicbazarmad.appspot.com",
+            messagingSenderId: "330157543683",
+            appId: "1:330157543683:web:12a5ee0854b79e9efcd936",
+            measurementId: "G-2DW0SHCYV0"
+        };
+
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+     </script>
+     <script src = "contactus.js"></script>
+     <footer class="footer-container">
+      <div class="container">
+          <div class="footer-content">
+              <div class="connect">
+                  <h3>CONNECT WITH US</h3>
+                  <input type="email" placeholder="Enter Email ID">
+              </div>
+              
+                  <div class="col">
+                      <h4>Links</h4>
+                      <ul class="list-unstyled">
+                          <li><a href="aboutus.html">About Us</a></li>
+                          <li><a href="catalogue.html">Services</a></li>
+                          <li><a href="contact us.html">Contact</a></li>
+                      </ul>
+                  </div>
+                  <div class="col">
+                  </div>
+              </div>
+          </div>
+          <hr>
+          <p class="text-center">&copy; 2023 Tech Edge. All rights reserved.</p>
+      </div>
+  </footer>
+</body>
+</html>

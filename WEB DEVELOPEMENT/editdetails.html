@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User Details</title>
+    <link rel="stylesheet" href="editdetails.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Company Logo">
+            <span>TechEdge</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mainhome.html">Home</a></li>
+                <li><a href="catalogue.html">Shop</a>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact us.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- <div class="profile-cart"> -->
+            <!-- <a href="login1.html">Login</a>
+            <a href="signup1.html">Signup</a>
+            <a href="viewcart.html"><img id="cartBtn" src="cart.png" alt="Cart"></a> -->
+        <!-- </div> -->
+    </header>
+    <h1>Edit User Details</h1>
+    
+    <form id="edit-form">
+        <input type="text" id="username" placeholder="Phone number" required>
+        <br>
+        <input type="password" id="password" placeholder="Password" required>
+        <br>
+        <input type="text" id="firstname" placeholder="First Name" required>
+        <br>
+        <input type="text" id="lastname" placeholder="Last Name" required>
+        <br>
+        <input type="file" id="image" accept="image/*">
+        <br>
+        <input type="text" id="address" placeholder="Address" required>
+        <br>
+        <progress id="progress" max="100" value="0"></progress>
+        <br>
+        <p id="error-message" style="color: rgb(8, 1, 1);"></p>
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="editdetails.js"></script>
+    <footer class="footer-container">
+        <div class="container">
+            <div class="footer-content">
+                <div class="connect">
+                    <h3>CONNECT WITH US</h3>
+                    <input type="email" placeholder="Enter Email ID">
+                </div>
+                
+                    <div class="col">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="contact us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">&copy; 2023 Tech Edge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

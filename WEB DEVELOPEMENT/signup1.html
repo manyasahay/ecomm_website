@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>SignUP</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo2.jpg" alt="Company Logo">
+            <span>TechEdge</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mainhome.html">Home</a></li>
+                <!-- <li><a href="catalogue.html">Shop</a> -->
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact us.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="profile-cart">
+            <!-- <a href="login1.html">Login</a> -->
+            <!-- <a href="signup1.html">Signup</a> -->
+            <!-- <a href="viewcart.html"><img id="cartBtn" src="cart.png" alt="Cart"></a> -->
+        </div>
+    </header>
+    <h1>Sign Up</h1>
+    <div class="container">
+        <img src="logowp.png.jpg" alt="Electronics Store">
+        <form id="signup-form">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <input type="text" id="firstname" placeholder="First Name" required><br>
+            <input type="text" id="lastname" placeholder="Last Name" required><br>
+            <input type="text" id="address" placeholder="Address" required><br>
+            <input type="file" id="image" accept="image/*" required><br>
+            <input type="checkbox" id="isManager">
+            <label for="isManager"> Manager</label><br>
+            <button type="submit" id="signup">Sign Up</button><br>
+        </form>
+        <p id="error-message" style="color: #fff;"></p>
+    </div>
+
+        <script src = "signup2.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+       <script>
+ const firebaseConfig = {
+            apiKey: "AIzaSyCBVnCNu0GAetC5I5UaIu0_0kBvJbqQ-ss",
+            authDomain: "electronicbazarmad.firebaseapp.com",
+            databaseURL: "https://electronicbazarmad-default-rtdb.firebaseio.com",
+            projectId: "electronicbazarmad",
+            storageBucket: "electronicbazarmad.appspot.com",
+            messagingSenderId: "330157543683",
+            appId: "1:330157543683:web:12a5ee0854b79e9efcd936",
+            measurementId: "G-2DW0SHCYV0"
+        };
+      
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+     </script>
+     <footer class="footer-container">
+        <div class="container">
+            <div class="footer-content">
+                <div class="connect">
+                    <h3>CONNECT WITH US</h3>
+                    <input type="email" placeholder="Enter Email ID">
+                </div>
+                
+                    <div class="col">
+                        <h4>Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="contact us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">&copy; 2023 Tech Edge. All rights reserved.</p>
+        </div>
+    </footer>
+
+  </body>
+<progress value="0" max="100" id="image-upload-progress"></progress>
+</body>
+</html>
